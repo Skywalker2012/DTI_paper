@@ -499,14 +499,21 @@ However, the notably increasing computation in probabilistic methods inhibits th
 
 Recent advance in Graphic Processing Units (GPUs) provides a unique solution to such difficulties. The GPU, with massively parallel processors, where instructions execute in Single-Instruction Multiple-Data (SIMD) manner, proves suitable for general-purpose data-parallel scientific computation. In this work, we map the probabilistic tractography algorithms described in GPU architecture. We test our GPU-based framework on various datasets, and achieve performance gains up to ....... times and ...... on mid-range GPU over regular CPUs.
 
-Our acceleration may greatly benefit the neuroscience research. Since the local diffusion data is available only on a discrete grid, interpolations are needed to determine the diffusion properties at arbitrary point. Without high performance computing devices, Behrens proposes randomly choosing one neighboring grid point to avoid extremely cost computation[10]. While in our work, we enable researchers to perform accurate algorithm with the help of GPU. Meanwhile, since the fiber tracking is mathematically solving Ordinary Differential Equations (ODE), and streamline-based algorithms are analogous to Euler ODE solver[5], shorter step length leads to increase in both accuracy and computational complexity. Faster implementationallow researchers to try mory
+Our acceleration may greatly benefit the neuroscience research. Since the local diffusion data is available only on a discrete grid, interpolations are needed to determine the diffusion properties at arbitrary point. Without high performance computing devices, Behrens proposes randomly choosing one neighboring grid point to avoid extremely cost computation[10]. While in our work, we enable researchers to perform accurate algorithm with the help of GPU. Meanwhile, since the fiber tracking is mathematically solving Ordinary Differential Equations (ODE), and streamline-based algorithms are analogous to Euler ODE solver[5], shorter step length leads to increase in both accuracy and computational complexity. Faster implementation allow researchers to try more aggressive parameters for potentially better results. Moreover, to address the partial volume effect, High Angular Resolution Diffusion Imaging (HARDI), whose computational complexity is far greater than those of DTI, become a potential candidate[?]. As is discussed in Section ..., our work is with considerable scalability, and can be easily extended to HARDI. In sum, reduction in computing time is of essential value.
+
+The rest of our paper is organized as follow: we review the related GPU acceleration in Section ..., and describe the algorithms and methods in Section. Experimental results are provided in Section. Section ... concludes the paper.
+
+\section{Related work}
+\IEEEPARstart{A}{} number of research groups have studied the GPU based fiber tracking. Most previous work focuses on the visualization of tractography results. For example, Reina proposes a new approach for the visualization of hyper-streamlines[14]; Petrovic presents uses line illumination and shadowing of fibers in order to improve the perception of their structure[16]; Hlawitschka presents a method to display a large amount of superquadric glyphs for visualizing diffusion tensor data[17]; Kondratieve take advantage of GPU particle engine to save the memory bandwith when performing fiber tracking[18]. Besides, great effort has been made to improve the interactivity of the fiber tractography[19][20][21][22]. Mittmann compares the fiber tracking applications in two different parallel environments, GPUs and PC cluster, and shows that both HPC configurations are suitable for fiber trackoing [23]. However, all of them using the deterministic streamlining algorithms.
+
+\section{Method}
+
+\section{Result}
+
+
+
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
-I wish you the best of success.
-
-\hfill mds
-
-\hfill December 27, 2012
 
 \subsection{Subsection Heading Here}
 Subsection text here.
@@ -623,7 +630,8 @@ The conclusion goes here.
 % \subsection or using \label (\appendices by itself
 % starts a section numbered zero.)
 %
-
+\section*{Acknowledgment}
+The authors would like to thank...
 
 \appendices
 \section{Proof of the First Zonklar Equation}
@@ -636,10 +644,7 @@ Appendix two text goes here.
 
 
 % use section* for acknowledgement
-\section*{Acknowledgment}
 
-
-The authors would like to thank...
 
 
 % Can use something like this to put references on a page
